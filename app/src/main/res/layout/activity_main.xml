@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/primary_light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="Using MathView with.."
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textColor="@color/secondary_text"
+        android:layout_height="wrap_content" />
+
+    <Button
+        style="@style/AuthButton"
+        android:text="RecyclerView"
+        android:layout_gravity="center_horizontal"
+        android:onClick="recyclerViewClick"
+        />
+
+    <Button
+        style="@style/AuthButton"
+        android:text="Layout"
+        android:layout_gravity="center_horizontal"
+        android:onClick="layoutViewClick"
+        />
+
+    <Button
+        style="@style/AuthButton"
+        android:text="Add at Runtime"
+        android:layout_gravity="center_horizontal"
+        android:onClick="addingAtRuntime"
+        />
+
+
+
+
+
+
+
+</LinearLayout>
