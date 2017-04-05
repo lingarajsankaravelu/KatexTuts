@@ -1,10 +1,12 @@
-package katex.hourglass.in.katextuts;
+package katex.hourglass.in.katextuts.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import katex.hourglass.in.katextuts.R;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "MainActivity";

@@ -1,8 +1,10 @@
-package katex.hourglass.in.katextuts;
+package katex.hourglass.in.katextuts.activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import katex.hourglass.in.katextuts.R;
 
 /**
  * Created by lingaraj on 4/4/17.

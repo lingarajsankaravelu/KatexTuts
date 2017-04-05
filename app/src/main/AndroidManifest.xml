@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,13 +18,13 @@
         </activity>
 
         <activity
-            android:name=".MathViewAdditionAtRuntime"
+            android:name=".activities.MathViewAdditionAtRuntime"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MathViewListActivity"
+            android:name=".activities.MathViewListActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".MathviewInLayoutActivity"
+            android:name=".activities.MathviewInLayoutActivity"
             android:screenOrientation="portrait" />
     </application>
 
