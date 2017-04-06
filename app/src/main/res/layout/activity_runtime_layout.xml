@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/cardview_light_background"
+    android:id="@+id/linear_parent_layout"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adding MathView at Runtime"
+        android:layout_margin="6dp"
+        android:textSize="18sp"
+        android:textColor="@color/primary_text"
+        />
 
 </LinearLayout>

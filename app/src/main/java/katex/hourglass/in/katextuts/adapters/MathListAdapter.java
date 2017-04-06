@@ -12,6 +12,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import katex.hourglass.in.katextuts.Helpers;
 import katex.hourglass.in.katextuts.R;
 import katex.hourglass.in.katextuts.activities.MathViewListActivity;
@@ -25,16 +28,16 @@ public class MathListAdapter extends RecyclerView.Adapter<MathListAdapter.ViewHo
     private String TAG = "MATH_LIST_ADAP";
     private MathViewListActivity.CardClick cardClick;
     private int selected_card_position = -1;
-    private String[] formulas;
+    private List<String> formulas = new ArrayList<String>();
     private Context mContext;
     
    
-    public MathListAdapter(Context context,MathViewListActivity.CardClick click, String [] formulas_array)
+    public MathListAdapter(Context context,MathViewListActivity.CardClick click,  List<String> formulas_list)
     {
         //Full Page Correction Rubric list click
         this.mContext = context;
        this.cardClick = click;
-       this.formulas = formulas_array;
+       this.formulas = formulas_list;
     }
 
 
@@ -52,30 +55,28 @@ public class MathListAdapter extends RecyclerView.Adapter<MathListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        if (selected_card_position==position)
-        {
+      /*  if (selected_card_position==position) {
             holder.cardView.setCardBackgroundColor(Helpers.getRandomColor(position));
             holder.math_view.setTextColor(ContextCompat.getColor(mContext,R.color.colorTextPrimary));
             holder.math_view.setTextSize(14);
         }
-        else
-        {
-
+        else {
             holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.colorTextPrimary));
             holder.math_view.setTextColor(Helpers.getRandomColor(position));
             holder.math_view.setTextSize(14);
+        } */
+        holder.math_view.setDisplayText(formulas.get(position));
+        holder.math_view.setTextColor(Helpers.getRandomColor(position));
+        holder.math_view.setTextSize(14);
 
-        }
-        holder.math_view.setDisplayText(formulas[position]);
-
-       }
+    }
 
 
 
     @Override
     public int getItemCount() {
 
-        return formulas.length;
+            return formulas.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
