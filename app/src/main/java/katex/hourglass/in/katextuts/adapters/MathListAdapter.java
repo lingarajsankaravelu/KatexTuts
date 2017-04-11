@@ -45,29 +45,27 @@ public class MathListAdapter extends RecyclerView.Adapter<MathListAdapter.ViewHo
 
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.card_layout_recyclerview, parent, false);
+    public MathListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(this.mContext)
+                .inflate(R.layout.card_math_recyclerview, parent, false);
         v.setOnClickListener(this.cardClick);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
-      /*  if (selected_card_position==position) {
-            holder.cardView.setCardBackgroundColor(Helpers.getRandomColor(position));
-            holder.math_view.setTextColor(ContextCompat.getColor(mContext,R.color.colorTextPrimary));
+    public void onBindViewHolder(MathListAdapter.ViewHolder holder, int position) {
+       if (selected_card_position==position) {
+            holder.math_view.setViewBackgroundColor(ContextCompat.getColor(mContext,R.color.cardview_light_background));
+            holder.math_view.setTextColor(ContextCompat.getColor(mContext,R.color.cardview_dark_background));
             holder.math_view.setTextSize(14);
         }
         else {
-            holder.cardView.setCardBackgroundColor(ContextCompat.getColor(mContext,R.color.colorTextPrimary));
-            holder.math_view.setTextColor(Helpers.getRandomColor(position));
+            holder.math_view.setViewBackgroundColor(Helpers.getRandomColor(mContext,position));
+            holder.math_view.setTextColor(ContextCompat.getColor(mContext,R.color.cardview_light_background));
             holder.math_view.setTextSize(14);
-        } */
+        }
         holder.math_view.setDisplayText(formulas.get(position));
-        holder.math_view.setTextColor(Helpers.getRandomColor(position));
-        holder.math_view.setTextSize(14);
 
     }
 

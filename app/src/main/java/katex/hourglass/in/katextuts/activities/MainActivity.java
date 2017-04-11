@@ -3,6 +3,7 @@ package katex.hourglass.in.katextuts.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
@@ -15,6 +16,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setInitialViews();
+    }
+
+    private void setInitialViews() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Katex MathView Demo");
+
+
     }
 
     public void recyclerViewClick(View view) {
@@ -34,4 +44,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),MathViewAdditionAtRuntime.class);
         startActivity(intent);
     }
+
+
 }
